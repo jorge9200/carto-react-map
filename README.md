@@ -1,49 +1,36 @@
-# CARTO for React
+# CARTO REACT MAP APPLICATION
 
-Welcome to CARTO for React! The best way to develop Location Intelligence Apps using CARTO Cloud Native platform + deck.gl. It will provide you a well designed structure following the best practices for modern frontend development and an integrated toolchain for testing, building and deploying your application.
+Welcome, this application is using CARTO for React! The best way to develop Location Intelligence Apps using CARTO Cloud Native platform + deck.gl. It is cosuming to data sets:
+- `carto-demo-data.demo_tables.retail_stores`
+- `carto-demo-data.demo_tilesets.sociodemographics_usa_blockgroup`
 
-To get further information about CARTO for React visit our [documentation](https://docs.carto.com/react).
+On top of it some features have been added. A new widget where allows to configure the following styles of the layer:
+- Fill color 
+- Outline size and color
+- Radius
+- Fill color based on a column of your dataset: revenue (retail_stores) or population (sociodemographics).
 
-This application has been kickstarted using the CARTO for React basic TypeScript template for CARTO 3. 
+## Getting Started
 
-## Available Scripts
+First, run the development server:
 
-In the project directory, you will find some scripts ready to run. Here you have the command using the Yarn package manager, which we recommend, but you can also run them with npm:
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-### `yarn start`
+Open [https://127.0.0.1:3000](https://127.0.0.1:3000) with your browser to see the result.
 
-Runs the app in the development mode.
+## Development decisions
+In order to achieve the desired new widget I've created a new common component where all new controls will be placed. New data has been added to the redux state to manage the properties of the new component and be shared across de layers and views. 
 
-Open [https://127.0.0.1:3000](https://127.0.0.1:3000) to view it in the browser.
-
-The page will reload if you make edits.
-
-You will also see any lint errors in the console.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.
-
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.
-
-Your app is ready to be deployed!
-
-See the section about [deployment](https://create-react-app.dev/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://create-react-app.dev/docs/getting-started/).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Future improvements
+- Styling can be improved, some styles with [MUI](https://mui.com/) have been made in order to have something at least visible.
+- UI/UX can be improved, I would like to change placements of the color pickers, improve titles and labels of the widget and loading states.
+- Testing needs to be developed by adding some coverage of unit and integration testing.
+- Remove all non necessary files and data from the app. CARTO for React includes lot of files and some of them won't be used.
