@@ -35,3 +35,5 @@ In order to achieve the desired new widget I've created a new common component `
 - Testing needs to be developed by adding some coverage of unit and integration testing.
 - Remove all non necessary files and data from the app. CARTO for React includes lot of files and some of them won't be used.
 - Refactor outline size and radius sliders multipliers to adjust more to the desired effect by the users.
+- Remove hardcoded values of max population and max revenue and get it from the sources.
+- Include more options for color grading on column based filering.
