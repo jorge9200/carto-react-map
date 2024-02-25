@@ -7,6 +7,8 @@ const COLORS = [
   [104, 171, 184],
   [79, 144, 166],
 ];
+const MAX_REVENUE = 2094290;
+const MAX_POP = 55407;
 
-export const storeColors = d3.scaleQuantize([0, 2094290], COLORS);
-export const socialColors = d3.scaleQuantize([0, 55407], COLORS);
+export const storeColors = d3.scaleQuantize([0, MAX_REVENUE], COLORS);
+export const socialColors = d3.scaleQuantize([0, MAX_POP], COLORS);
