@@ -1,39 +1,33 @@
 # CARTO REACT MAP APPLICATION
 
-Welcome, this application is using CARTO for React! The best way to develop Location Intelligence Apps using CARTO Cloud Native platform + deck.gl. It is cosuming to data sets:
-- `carto-demo-data.demo_tables.retail_stores`
-- `carto-demo-data.demo_tilesets.sociodemographics_usa_blockgroup`
+Welcome, this application uses CARTO for React! The best way to develop location intelligence applications using CARTO Cloud Native platform + deck.gl. It is based on datasets:
+- `carto-demo-data.demo_tables.retail_stores`.
+- `carto-demo-data.demo_tilesets.sociodemographics_usa_blockgroup`.
 
-On top of it some features have been added. A new widget where allows to configure the following styles of the layer:
-- Fill color 
-- Outline size and color
+In addition, some new features have been added. A new widget that allows you to configure the following layer styles
+- Fill colour 
+- Outline size and colour
 - Radius
-- Fill color based on a column of your dataset: revenue (retail_stores) or population (sociodemographics).
+- Fill colour based on a column in your dataset: sales (retail_stores) or population (sociodemographics).
 
-## Getting Started
+## Getting started
 
-First, run the development server:
+This application has been deployed in [Render](https://dashboard.render.com/), which you can access via a public URL: 
+https://carto-react-map.onrender.com
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Login and you will see the map with two top menus; Stores and Social. These will render the two datasets as layers on top of the map. Then you can play around with the Point Styles widget on the left.
 
-Open [https://127.0.0.1:3000](https://127.0.0.1:3000) with your browser to see the result.
+If you want to run this project locally, you will need to change the `cliendId` to one that allows `https://127.0.0.1:3000` domain and then run the project with `npm run dev`.
 
-## Development decisions
-In order to achieve the desired new widget I've created a new common component `src/components/common/widgets/PointStyles.tsx` where all new controls will be placed. New data has been added to the redux state to manage the properties of the new component and be shared across de layers and views. 
+## Development choices
+To achieve the desired new widget, I've created a new common component `src/components/common/widgets/PointStyles.tsx` where all the new controls will be placed. New data has been added to the redux state to manage the properties of the new component and to be shared across layers and views. 
 
 ## Future improvements
-- Styling can be improved, some styles with [MUI](https://mui.com/) have been made in order to have something at least visible.
-- UI/UX can be improved, I would like to change placements of the color pickers, improve titles and labels of the widget and loading states.
+- Styling can be improved, some styles have been made with [MUI](https://mui.com/) to at least have something visible.
+- UI/UX can be improved, I would like to change the placement of colour pickers, improve widget titles and labels, and load states.
 - Testing needs to be developed by adding some coverage of unit and integration testing.
-- Remove all non necessary files and data from the app. CARTO for React includes lot of files and some of them won't be used.
-- Refactor outline size and radius sliders multipliers to adjust more to the desired effect by the users.
-- Remove hardcoded values of max population and max revenue and get it from the sources.
-- Include more options for color grading on column based filering.
+- Remove all unnecessary files and data from the application. CARTO for React includes a lot of files and some of them aren't used.
+- Refactor outline size and radius slider multipliers to make them more user friendly.
+- Remove hardcoded values for max population and max revenue and get them from the sources.
+- Include more colour grading options for column-based filtering.
+- Refactor code to switch between `clientId' tokens on different environments.
