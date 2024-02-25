@@ -13,6 +13,7 @@ In addition, some new features have been added. A new widget that allows you to 
 ## Getting started
 
 This application has been deployed in [Render](https://dashboard.render.com/), which you can access via a public URL: 
+
 https://carto-react-map.onrender.com
 
 Login and you will see the map with two top menus; Stores and Social. These will render the two datasets as layers on top of the map. Then you can play around with the Point Styles widget on the left.
@@ -30,4 +31,4 @@ To achieve the desired new widget, I've created a new common component `src/comp
 - Refactor outline size and radius slider multipliers to make them more user friendly.
 - Remove hardcoded values for max population and max revenue and get them from the sources.
 - Include more colour grading options for column-based filtering.
-- Refactor code to switch between `clientId' tokens on different environments.
+- Refactor code to switch between `clientId` tokens on different environments.
