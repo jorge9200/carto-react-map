@@ -41,6 +41,8 @@ function OauthProvider({ children }: { children: JSX.Element }) {
   const { domain, clientId, scopes, audience, organizationId } =
     initialState.oauth;
 
+  console.log('CLIENT ID ', clientId);
+
   if (!clientId) {
     alert(
       'Need to define a clientId. Please check the file store/initalStateSlice.js',

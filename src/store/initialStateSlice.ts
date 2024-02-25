@@ -22,7 +22,7 @@ export const initialState: InitialCarto3State = {
   accountsUrl: 'http://app.carto.com/',
   oauth: {
     domain: 'auth.carto.com',
-    clientId: 'jyVRsLjoyoy7nJnW6PJ38Xgk03Jmxak3', // type here your application clientId
+    clientId: 'isy208d-ZMSJVrS2mUhvPG3ZYx0OeqHDSqTYgah6eXOszxvGif-jfHZBbnwemhOr', // type here your application clientId
     organizationId: '', // organizationId is required for SSO
     namespace: 'http://app.carto.com/',
     scopes: [
