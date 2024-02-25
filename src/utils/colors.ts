@@ -9,3 +9,4 @@ const COLORS = [
 ];
 
 export const storeColors = d3.scaleQuantize([0, 2094290], COLORS);
+export const socialColors = d3.scaleQuantize([0, 55407], COLORS);

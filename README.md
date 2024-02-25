@@ -27,10 +27,11 @@ bun dev
 Open [https://127.0.0.1:3000](https://127.0.0.1:3000) with your browser to see the result.
 
 ## Development decisions
-In order to achieve the desired new widget I've created a new common component where all new controls will be placed. New data has been added to the redux state to manage the properties of the new component and be shared across de layers and views. 
+In order to achieve the desired new widget I've created a new common component `src/components/common/widgets/PointStyles.tsx` where all new controls will be placed. New data has been added to the redux state to manage the properties of the new component and be shared across de layers and views. 
 
 ## Future improvements
 - Styling can be improved, some styles with [MUI](https://mui.com/) have been made in order to have something at least visible.
 - UI/UX can be improved, I would like to change placements of the color pickers, improve titles and labels of the widget and loading states.
 - Testing needs to be developed by adding some coverage of unit and integration testing.
 - Remove all non necessary files and data from the app. CARTO for React includes lot of files and some of them won't be used.
+- Refactor outline size and radius sliders multipliers to adjust more to the desired effect by the users.

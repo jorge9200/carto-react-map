@@ -5,7 +5,7 @@ import { selectSourceById } from '@carto/react-redux';
 import { useCartoLayerProps } from '@carto/react-api';
 import htmlForFeature from 'utils/htmlForFeature';
 import { RootState } from 'store/store';
-import { storeColors } from 'utils/colors';
+import { socialColors } from 'utils/colors';
 
 export const SOCIAL_LAYER_ID = 'socialLayer';
 
@@ -22,10 +22,10 @@ export default function SocialLayer() {
   if (socialLayer && source) {
     return new CartoLayer({
       ...cartoLayerProps,
-      id: `${SOCIAL_LAYER_ID}?revenued=${pointStyles.revenueBased}`,
+      id: `${SOCIAL_LAYER_ID}?columnBased=${pointStyles.columnBased}`,
       getFillColor: (d: any) => {
-        if (pointStyles.revenueBased) {
-          return storeColors(d.properties.revenue);
+        if (pointStyles.columnBased) {
+          return socialColors(d.properties.total_pop);
         } else {
           return Object.values(pointStyles.fillColor);
         }

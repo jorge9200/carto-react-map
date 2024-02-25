@@ -10,7 +10,7 @@ const slice = createSlice({
       outlineSize: 2,
       outlineColor: { r: 0, g: 0, b: 0 },
       radius: 2,
-      revenueBased: false,
+      columnBased: false,
     },
   },
   reducers: {

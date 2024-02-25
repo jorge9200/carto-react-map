@@ -18,7 +18,7 @@ export default function PointStyles({ type }: { type: string }) {
     <>
       <WrapperWidgetUI title={'Point Styles'}>
         <h5>Fill Color</h5>
-        {!pointStyles.revenueBased && (
+        {!pointStyles.columnBased && (
           <Compact
             color={rgbaToHexa(pointStyles?.fillColor)}
             onChange={(color) => {
@@ -30,17 +30,17 @@ export default function PointStyles({ type }: { type: string }) {
         <FormControlLabel
           control={
             <Switch
-              checked={pointStyles.revenueBased}
+              checked={pointStyles.columnBased}
               onChange={() => {
                 dispatch(
                   setPointStyles({
-                    revenueBased: !pointStyles.revenueBased,
+                    columnBased: !pointStyles.columnBased,
                   }),
                 );
               }}
             />
           }
-          label='Fill color based on revenue'
+          label='Fill color based on specific data'
         />
         <h5>Outline</h5>
         <Slider

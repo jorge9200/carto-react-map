@@ -3,5 +3,5 @@ type PointStyles = {
     outlineSize?: number;
     outlineColor?: {r: number, g: number, b: number};
     radius?: number;
-    revenueBased?: boolean;
+    columnBased?: boolean;
 }

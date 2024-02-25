@@ -22,9 +22,9 @@ export default function StoresLayer() {
   if (storesLayer && source && pointStyles) {
     return new CartoLayer({
       ...cartoLayerProps,
-      id: `${STORES_LAYER_ID}?revenued=${pointStyles.revenueBased}`,
+      id: `${STORES_LAYER_ID}?columnBased=${pointStyles.columnBased}`,
       getFillColor: (d: any) => {
-        if (pointStyles.revenueBased) {
+        if (pointStyles.columnBased) {
           return storeColors(d.properties.revenue);
         } else {
           return Object.values(pointStyles.fillColor);
